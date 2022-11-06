@@ -17,8 +17,19 @@ export class PlantaListComponent implements OnInit {
       this.plantas=plantas;
     })
   }
+
+  getNumberIntPlantas():number{
+    let interiorCount = this.plantas.filter(planta=>{return planta.tipo.includes('Interior')}).length;
+    return interiorCount;
+  }
+
+  getNumberExtPlantas():number{
+    let exteriorCount = this.plantas.filter(planta=>{return planta.tipo.includes('Exterior')}).length;
+    return exteriorCount;
+  }
   ngOnInit() {
     this.getPlantas();
+    this.getNumberIntPlantas();
   }
 
 }
