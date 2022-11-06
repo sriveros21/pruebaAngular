@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <h1>Vivero El Otoño</h1>
+  <hr />
+  <div class="col-12 overflow">
+		<img class="img-fluid overflow" src="../../../assets/otono.webp" alt="Card image cap">
+	</div>
+
+  <hr />
+  <div class="col-6">
+    <table class="table">
+      <thead class="thead table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre Comun</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Clima</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of plantas">
+          <th scope="row">{{p.id}}</th>
+          <td>{{p.nombre_comun}}</td>
+          <td>{{p.tipo}}</td>
+          <td>{{p.clima}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="col-12 text-center">
+    <p>Contact us: +57 3102105253</p>
+    <p>info@viveroelotonio.com</p>
+    <p>@viveroelotonio</p>
+  </footer>
+</div>
